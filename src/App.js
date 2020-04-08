@@ -1,13 +1,15 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Pipeline from './pages/Pipeline/Pipeline';
+
+import "@gpn-design/uikit/dist/style.css";
 import './App.css';
 
 function App() {
   return (
     <div className="App 
         theme 
-        theme_color_gpn-default 
+        theme_color_gpn-dark 
         theme_size_gpn-default 
         theme_control_gpn-default
         theme_breakpoint_default

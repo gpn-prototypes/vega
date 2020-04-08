@@ -1,0 +1,13 @@
+.Pipeline {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+}
+
+.Pipeline__Aside {
+  min-height: 100vh;
+  background-color: var(--color-bg-secondary);
+}
+
+.Pipeline__Main {
+  padding: var(--space-3xl);
+}
