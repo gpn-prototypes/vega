@@ -1,6 +1,7 @@
 import React from 'react';
 import block from 'bem-cn';
-import { TextField } from '@gpn-design/uikit';
+import { IconSearch } from '@gpn-design/uikit';
+import Field from '../Field/Field';
 import ListItem from './ListItem/ListItem';
 
 import './styles.css';
@@ -17,23 +18,25 @@ const modules = [
   { label: 'Оценка SS' },
 ]
 
-const b = block('PipelineStageItem');
+const b = block('PipelineStageCard');
 const d = block('decorator');
 const ls = block('pt-list');
 
-const PipelineItem = (props) => {
+const PipelineStageCard = (props) => {
   const { className } = props;
 
   return (
     <div className={ b({}).mix( ls({'space-a': 'xs'}) ) }>
-      <div className={ b('Header').mix( d({'space-h': 'xs'}) ) }>
-        {/* <TextField width='full' size='xs' type='text' placeholder='0' /> */}
-      </div>
-      <div className={ b('List') }>
-        {modules.map((module) => <ListItem >{module.label}</ListItem>)}
+      <header className={ b('Header').mix( d({'space-h': 'xs'}) ) }>
+        <Field width='full' view='clear' size='xs' type='text' placeholder='Поиск' leftSide={IconSearch} />
+      </header>
+      <div className={ b('Modules') }>
+        <div className={ b('List') }>
+          {modules.map((module) => <ListItem >{module.label}</ListItem>)}
+        </div>
       </div>
     </div>
   )
 };
 
-export default PipelineItem;
+export default PipelineStageCard;

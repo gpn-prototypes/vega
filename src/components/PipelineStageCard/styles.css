@@ -1,0 +1,67 @@
+.PipelineStageCard {
+  position: relative;
+  z-index: 1;
+  width: 260px;
+  box-sizing: border-box;
+}
+
+.PipelineStageCard__Header {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 32px;
+  box-sizing: border-box;
+  border-radius: 4px 4px 0 0;
+  background-color: var(--color-bg-secondary);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.12s, transform 0.12s;
+}
+
+.PipelineStageCard:hover .PipelineStageCard__Header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.PipelineStageCard__Modules {
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--color-bg-default);
+  box-shadow: 0 1px 4px 2px rgba(var(--color-nums-shadow), 0.24);
+}
+
+.PipelineStageCard__List {
+  display: grid;
+  grid-row-gap: 2px;
+  max-height: 280px;
+  padding: var(--space-xs);
+  overflow: auto;
+}
+
+.PipelineStageCard__ListItem {
+  position: relative;
+  background-color: var(--color-bg-stripe);
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.PipelineStageCard__ListItem:hover {
+  background-color: var(--color-bg-ghost);
+}
+
+.PipelineStageCard__ListItem_checked 
+.PipelineStageCard__Label { color: var(--color-typo-primary); }
+
+.PipelineStageCard__ListItem_checked::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 4px;
+  border: 1px solid var(--color-control-bg-primary);
+}
