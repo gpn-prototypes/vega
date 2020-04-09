@@ -10,4 +10,10 @@
 
 .Pipeline__Main {
   padding: var(--space-3xl);
+  overflow: auto;
+}
+
+.Pipeline__Scenario {
+  display: flex;
+  flex-wrap: nowrap;
 }

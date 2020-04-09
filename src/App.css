@@ -2,3 +2,7 @@
   min-height: 100vh;
   background-color: var(--color-bg-default);
 }
+
+body {
+  background-color: var(--color-bg-default);
+}

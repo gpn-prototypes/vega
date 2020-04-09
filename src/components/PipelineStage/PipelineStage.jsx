@@ -8,13 +8,21 @@ import './styles.css';
 const b = block('PipelineStage');
 
 const PipelineStage = (props) => {
-  const { className } = props;
+  const { complete, progress, view, modules, className } = props;
 
   return (
     <div className={ b() }>
-      <PipelineStageCard />
+      <PipelineStageCard view={view} modules={modules} />
 
-      <div className={ b('Line') }>
+      <div className={ b('Line', { completed: complete === '100%' }) }>
+        <div  
+          className={b('Progress', { view: 'inProgress' } )} 
+          style={{ width: progress }} 
+        />
+        <div  
+          className={b('Progress', { view: 'completed' } )} 
+          style={{ width: complete }} 
+        />
         <div className={ b('AddNewBranch') }>
           <Button 
             size='xs' 

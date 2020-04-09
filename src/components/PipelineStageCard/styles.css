@@ -10,11 +10,13 @@
   top: -24px;
   left: 0;
   z-index: -1;
+  display: flex;
   width: 100%;
   height: 32px;
   box-sizing: border-box;
   border-radius: 4px 4px 0 0;
   background-color: var(--color-bg-secondary);
+  overflow: hidden;
   opacity: 0;
   transform: translateY(4px);
   transition: opacity 0.12s, transform 0.12s;
@@ -42,17 +44,34 @@
 
 .PipelineStageCard__ListItem {
   position: relative;
+  display: flex;
+  justify-content: space-between;
   background-color: var(--color-bg-stripe);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.PipelineStageCard__Settings {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  opacity: 0;
 }
 
 .PipelineStageCard__ListItem:hover {
   background-color: var(--color-bg-ghost);
 }
 
+.PipelineStageCard__ListItem:hover 
+.PipelineStageCard__Settings {
+  opacity: 1;
+}
+
 .PipelineStageCard__ListItem_checked 
+.PipelineStageCard__Label,
+.PipelineStageCard_view_preview 
 .PipelineStageCard__Label { color: var(--color-typo-primary); }
 
 .PipelineStageCard__ListItem_checked::before {
@@ -64,4 +83,27 @@
   right: 0;
   border-radius: 4px;
   border: 1px solid var(--color-control-bg-primary);
+}
+
+.PipelineStageCard__ModuleName { 
+  position: relative; 
+  --status-color: transparent;
+}
+
+.PipelineStageCard__ModuleName::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--status-color);
+}
+
+.PipelineStageCard__ModuleName_status_success {
+  --status-color: var(--color-bg-success);
+}
+
+.PipelineStageCard__ModuleName_status_inProgress {
+  --status-color: var(--color-bg-normal);
 }
