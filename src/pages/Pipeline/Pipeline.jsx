@@ -1,14 +1,9 @@
 import React from 'react';
 import block from 'bem-cn';
-import { Text } from '@gpn-design/uikit';
 import PipelineStage from '../../components/PipelineStage/PipelineStage';
 import { CreatePipelineModules, PreviewPipelineModules } from '../../mocks.js'
 
 import './styles.css';
-
-const statuses = [
-
-]
 
 const b = block('Pipeline');
 const d = block('decorator');

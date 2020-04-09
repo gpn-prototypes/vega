@@ -10,11 +10,17 @@ const b = block('PipelineStage');
 const PipelineStage = (props) => {
   const { complete, progress, view, modules, className } = props;
 
+  const getView = () => {
+    if (complete === '100%' && progress === '100%') return 'completed';
+    else if (progress === '100%') return 'inProgress';
+    return false;
+  };
+
   return (
     <div className={ b() }>
       <PipelineStageCard view={view} modules={modules} />
 
-      <div className={ b('Line', { completed: complete === '100%' }) }>
+      <div className={ b('Line', { view: getView() }) }>
         <div  
           className={b('Progress', { view: 'inProgress' } )} 
           style={{ width: progress }} 

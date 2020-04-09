@@ -96,7 +96,7 @@
   top: 50%;
   left: 2px;
   display: block;
-  height: 3px;
+  height: 2px;
   border-radius: 99em;
   background-color: var(--status-color);
   box-shadow: 
@@ -114,6 +114,10 @@
   --status-color: var(--color-bg-normal);
 }
 
-.PipelineStage__Line_completed.PipelineStage__Line::before {
+.PipelineStage__Line_view_inProgress.PipelineStage__Line::before {
+  background-color: var(--color-bg-normal);
+}
+
+.PipelineStage__Line_view_completed.PipelineStage__Line::before {
   background-color: var(--color-bg-success);
 }

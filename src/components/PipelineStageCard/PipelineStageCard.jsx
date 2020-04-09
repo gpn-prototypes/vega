@@ -1,6 +1,6 @@
 import React from 'react';
 import block from 'bem-cn';
-import { Button, IconDocAdd, IconAdd, IconSearch } from '@gpn-design/uikit';
+import { Button, IconDocAdd, IconSearch } from '@gpn-design/uikit';
 import Field from '../Field/Field';
 import ListItem from './ListItem/ListItem';
 
@@ -8,7 +8,6 @@ import './styles.css';
 
 const b = block('PipelineStageCard');
 const d = block('decorator');
-const ls = block('pt-list');
 
 const PipelineStageCard = (props) => {
   const { view, modules, className } = props;

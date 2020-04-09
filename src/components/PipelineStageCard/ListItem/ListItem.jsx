@@ -3,7 +3,6 @@ import block from 'bem-cn';
 import { Text, Button, IconSettings } from '@gpn-design/uikit';
 
 const b = block('PipelineStageCard');
-const ls = block('pt-list');
 const d = block('decorator');
 
 const PipelineItem = (props) => {

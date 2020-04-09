@@ -90,10 +90,10 @@ export const PreviewPipelineModules = [
       },
       { 
         label: 'Оценка вероятности успеха ПРБ',
-        status: 'inProgress'
+        status: ''
       },
     ],
-    progress: '100%',
+    progress: '66%',
     success: '33%',
   },
   {
@@ -140,18 +140,18 @@ export const PreviewPipelineModules = [
       },
       { 
         label: 'Оценка САРЕХ',
-        status: ''
+        status: 'inProgress'
       },
       { 
         label: 'Оценка ОРЕХ',
-        status: ''
+        status: 'inProgress'
       },
       { 
         label: 'Подготовка базовой ФЭМ',
         status: ''
       },
     ],
-    progress: '',
+    progress: '50%',
     success: '',
   },
   {
