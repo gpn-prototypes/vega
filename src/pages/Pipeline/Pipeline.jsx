@@ -1,7 +1,7 @@
 import React from 'react';
 import block from 'bem-cn';
 import { Text } from '@gpn-design/uikit';
-import PipelineStageCard from '../../components/PipelineStageCard/PipelineStageCard';
+import PipelineStage from '../../components/PipelineStage/PipelineStage';
 
 import './styles.css';
 
@@ -14,7 +14,7 @@ const Pipeline = (props) => {
     <div className={ b() }>
       <div className={ b('Aside') }></div>
       <div className={ b('Main') }>
-        <PipelineStageCard />
+        <PipelineStage />
       </div>
     </div>
   )

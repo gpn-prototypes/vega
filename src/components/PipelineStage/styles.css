@@ -1,0 +1,84 @@
+.PipelineStage {
+  position: relative;
+  width: 300px;
+  height: 360px;
+  padding-bottom: var(--space-4xl);
+  box-sizing: border-box;
+}
+
+.PipelineStage__Line {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: var(--space-m) 0;
+}
+
+.PipelineStage__Line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-bg-normal);
+  transform: translateY(-50%);
+}
+
+.PipelineStage__Line::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-bg-normal);
+}
+
+.PipelineStage__AddNewBranch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: opacity 0.12s, transform 0.12s;
+}
+
+.PipelineStage__Line:hover 
+.PipelineStage__AddNewBranch {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.PipelineStage__Tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 148px;
+  padding: var(--space-xs);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: var(--color-bg-default);
+  text-align: center;
+  opacity: 0;
+  transform: translate(-50%, -6px);
+  transition: opacity 0.24s, transform 0.24s;
+}
+
+.PipelineStage__Tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: block;
+  border-top: 6px solid var(--color-bg-default);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  transform: translateX(-50%);
+}
+
+.PipelineStage__AddNewBranch:hover 
+.PipelineStage__Tooltip {
+  opacity: 0.9;
+  transform: translate(-50%, -10px);
+}

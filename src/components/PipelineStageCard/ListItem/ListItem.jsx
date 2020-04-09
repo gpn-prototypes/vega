@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import block from 'bem-cn';
 import { Text } from '@gpn-design/uikit';
 
-const b = block('PipelineStageItem');
+const b = block('PipelineStageCard');
 const ls = block('pt-list');
 
 const PipelineItem = (props) => {
