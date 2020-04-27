@@ -1,6 +1,9 @@
 import React from 'react';
 import block from 'bem-cn';
-import { Text, Button, IconAdd } from '@gpn-design/uikit';
+import { Text } from '@gpn-design/uikit/Text';
+import { Button } from '@gpn-design/uikit/Button';
+import { IconAdd } from '@gpn-design/uikit/IconAdd';
+import '@gpn-design/uikit/__internal__/src/components/Theme/_color/Theme_color_gpnDefault.css';
 import PipelineStageCard from '../PipelineStageCard/PipelineStageCard';
 
 import './styles.css';
@@ -39,7 +42,7 @@ const PipelineStage = (props) => {
             form='round' 
             label='Добавить новую ветку'
           />
-          <div className={ b('Tooltip').mix('theme_color_gpn-default') }>
+          <div className={ b('Tooltip').mix('Theme_color_gpnDefault') }>
             <Text as='p' size='xs' view='primary' lineHeight='xs'>Добавить альтернативную ветку от этого этапа</Text>
           </div>
         </div>

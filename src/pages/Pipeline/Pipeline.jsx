@@ -18,7 +18,7 @@ const Pipeline = (props) => {
         <div className={ b('Scenario').mix( d({'space-b': 'l', 'indent-b': '2xl', 'border': 'b'}) ) }>
           {CreatePipelineModules.map((stage) => <PipelineStage view='create' modules={stage} />)}
         </div>
-        <div className={ b('Scenario').mix( d({'space-b': 'l', 'indent-b': '2xl', 'border': 'b'}) ) }>
+        {/* <div className={ b('Scenario').mix( d({'space-b': 'l', 'indent-b': '2xl', 'border': 'b'}) ) }>
           {PreviewPipelineModules.map((stage) => (
             <PipelineStage 
               view='preview' 
@@ -27,7 +27,7 @@ const Pipeline = (props) => {
               complete={stage.success} 
             />
           ))}
-        </div>
+        </div> */}
         
       </div>
     </div>

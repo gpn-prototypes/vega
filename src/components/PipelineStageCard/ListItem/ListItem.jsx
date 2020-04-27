@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import block from 'bem-cn';
-import { Text, Button, IconSettings } from '@gpn-design/uikit';
+import { Text } from '@gpn-design/uikit/Text';
+import { Button } from '@gpn-design/uikit/Button';
+import { IconSettings } from '@gpn-design/uikit/IconSettings';
 
 const b = block('PipelineStageCard');
 const d = block('decorator');

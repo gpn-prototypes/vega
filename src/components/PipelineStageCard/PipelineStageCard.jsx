@@ -1,6 +1,8 @@
 import React from 'react';
 import block from 'bem-cn';
-import { Button, IconDocAdd, IconSearch } from '@gpn-design/uikit';
+import { Button } from '@gpn-design/uikit/Button';
+import { IconAdd } from '@gpn-design/uikit/IconAdd';
+import { IconSearch } from '@gpn-design/uikit/IconSearch';
 import Field from '../Field/Field';
 import ListItem from './ListItem/ListItem';
 
@@ -19,7 +21,7 @@ const PipelineStageCard = (props) => {
         <Button 
           size='xs' 
           view='clear' 
-          iconLeft={IconDocAdd} 
+          iconLeft={IconAdd} 
           onlyIcon={true} 
           // iconSize='s'
           label='Загрузить документ' 

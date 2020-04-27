@@ -1,22 +1,28 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Pipeline from './pages/Pipeline/Pipeline';
+import { cnTheme } from '@gpn-design/uikit/Theme';
+import '@gpn-design/uikit/__internal__/src/components/Theme/_color/Theme_color_gpnDark.css';
+import '@gpn-design/uikit/__internal__/src/components/Theme/_space/Theme_space_gpnDefault.css';
+import '@gpn-design/uikit/__internal__/src/components/Theme/_size/Theme_size_gpnDefault.css';
+import '@gpn-design/uikit/__internal__/src/components/Theme/_font/theme_font_gpnDefault.css';
+import '@gpn-design/uikit/__internal__/src/components/Theme/_control/Theme_control_gpnDefault.css';
 
-import "@gpn-design/uikit/dist/style.css";
+import '@gpn-design/uikit/__internal__/src/utils/whitepaper/whitepaper.css'
+
+// import "@gpn-design/uikit/dist/style.css";
 import './App.css';
 
 function App() {
   return (
-    <div className="App 
-        theme 
-        theme_color_gpn-dark 
-        theme_size_gpn-default 
-        theme_control_gpn-default
-        theme_breakpoint_default
-        theme_font_gpn-default
-        theme_gap_medium 
-        theme_space_gpn-default
-      ">
+    <div className={cnTheme({
+      color: 'gpnDark',
+      control: 'gpnDefault',
+      font: 'gpnDefault',
+      size: 'gpnDefault',
+      space: 'gpnDefault',
+      gap: 'm',
+     }, ['App'])}>
       <Switch>
         <Route exact path="/pipeline">
           <Pipeline  />
